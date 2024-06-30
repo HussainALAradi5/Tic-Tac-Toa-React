@@ -33,13 +33,15 @@
 
 ##### image header 1
 
-![intro](./materials/images/Gameplay/01.png)
+![intro](./src/images/01.png)
+![intro](./src/images/02.png)
+![intro](./src/images/03.png)
 
 ##### image header 2
 
-## ![videos:](./materials/images/Gameplay/01.gif)
+## ![videos:](./src/images/01.gif)
 
-## ![videos:](./materials/images/Gameplay/02.gif)
+
 
 ### **_Future Updates_**
 
