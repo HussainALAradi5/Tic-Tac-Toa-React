@@ -28,7 +28,7 @@
 
 ##### just play the game and enjoy it
 
-## this is the link for the game [XO:](tic_tac_toa.surge.sh)
+## this is the link for the game (tic_tac_toa.surge.sh)
 
 ### **_Screenshots_**
 
