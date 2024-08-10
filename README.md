@@ -11,6 +11,7 @@
 ### **_Description_**
 
 #### this project is same as the previous tic tac toa i made, but this one with the react framework
+
 ---
 
 ### **_Technologies Used_**
@@ -27,21 +28,19 @@
 
 ##### just play the game and enjoy it
 
----
+## this is the link for the game [XO:](tic_tac_toa.surge.sh)
 
 ### **_Screenshots_**
 
 ##### image header 1
+
 ## ![videos:](./src/images/01.gif)
 
 ##### image header 2
 
-
 ![intro](./src/images/01.png)
 ![intro](./src/images/02.png)
 ![intro](./src/images/03.png)
-
-
 
 ### **_Future Updates_**
 
