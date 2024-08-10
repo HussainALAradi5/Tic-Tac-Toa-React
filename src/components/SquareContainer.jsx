@@ -59,7 +59,10 @@ const SquareContainer = () => {
   }
   return (
     <div className="squareContainer">
-      <div className="status"> {status}</div>
+      <div className="status">
+        <h1>{status}</h1>
+      </div>
+
       <Square value={sqaures[0]} onSquareClick={() => handleClick(0)} />
       <Square value={sqaures[1]} onSquareClick={() => handleClick(1)} />
       <Square value={sqaures[2]} onSquareClick={() => handleClick(2)} />

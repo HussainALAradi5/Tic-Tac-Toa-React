@@ -1,30 +1,30 @@
 * {
   font-family: cursive;
+  box-sizing: border-box;
 }
+
 body {
   background-color: rgb(36, 35, 35);
-}
-.mainContainer {
-  width: 100vw;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .squareContainer {
-  display: flex; 
-  flex-wrap: wrap; 
-  width: 300px; 
-  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
   justify-content: center;
   text-align: center;
 }
 
 .square {
   height: 5rem;
-  width: calc(30% - 10px); 
-  margin: 5px; 
+  width: calc(30% - 10px);
+  margin: 5px;
 }
 
 button {
@@ -37,25 +37,83 @@ button {
   color: whitesmoke;
   border-color: whitesmoke;
 }
-button:hover{
+
+button:hover {
   background-color: darkblue;
   transition: 1.5s;
   box-shadow: 1rem 1rem 1rem black;
 }
-.restrt{
+
+.restrt {
   display: flex;
   width: 8rem;
-font-size: 2rem;
-justify-self: center;
-margin-top: 2rem;
-border-radius: 2rem;
-background-color: black;
+  font-size: 2rem;
+  justify-self: center;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  background-color: black;
 }
-.restrt:hover{
+
+.restrt:hover {
   background-color: darkgreen;
-transition: 1.5s;
+  transition: 1.5s;
 }
-.status{
-  font-size: 1.5rem;
+
+.status {
   color: whitesmoke;
-margin-right: 10rem;}
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .squareContainer {
+    width: 80%;
+  }
+
+  .square {
+    height: 4rem;
+    width: calc(33.33% - 6px);
+  }
+
+  button {
+    font-size: 2rem;
+  }
+
+  .restrt {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .status {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .squareContainer {
+    width: 90%;
+  }
+
+  .square {
+    height: 3rem;
+    width: calc(33.33% - 4px);
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  .restrt {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .status {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
