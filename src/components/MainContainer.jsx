@@ -1,7 +1,10 @@
-import SquareContainer from "./SquareContainer"
+import Game from './Game'
 
-
-const MainContainer=()=>{
-    return (<div className="mainContainer"><SquareContainer/></div>)
+const MainContainer = () => {
+  return (
+    <div className="mainContainer">
+      <Game />
+    </div>
+  )
 }
 export default MainContainer

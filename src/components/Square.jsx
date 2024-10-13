@@ -1,8 +1,9 @@
-const Square = (props) => {
+const Square = ({ value, onSquareClick }) => {
   return (
-    <div className="square">
-      <button onClick={props.onSquareClick}>{props.value}</button>
-    </div>
+    <button className="square" onClick={onSquareClick}>
+      {value}
+    </button>
   )
 }
+
 export default Square
