@@ -1,8 +1,11 @@
-const Square = ({ value, onSquareClick }) => {
+import { Box } from '@chakra-ui/react'
+import { squareStyle } from './styles'
+
+const Square = ({ value, onClick }) => {
   return (
-    <button className="square" onClick={onSquareClick}>
+    <Box {...squareStyle} onClick={onClick}>
       {value}
-    </button>
+    </Box>
   )
 }
 

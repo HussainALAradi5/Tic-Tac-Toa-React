@@ -1,48 +1,29 @@
+import { Box, Button, Text, VStack } from '@chakra-ui/react'
 import Square from './Square'
-import ResultLogic from './ResultLogic'
-import { useState } from 'react'
 import Logic from './Logic'
+import ResultLogic from './ResultLogic'
+import { gameContainerStyle, boardStyle, restartButtonStyle } from './styles'
 
 const Game = () => {
-  const [squares, setSquares] = useState(Array(9).fill(null))
-
-  const {
-    squares: currentSquares,
-    turn,
-    handleClick,
-    handleRestart
-  } = Logic({
-    onClickSquare: setSquares
-  })
-
-  const winner = ResultLogic(currentSquares)
-  let status
-  if (winner) {
-    status = `Winner: ${winner}`
-  } else {
-    status = `Next player: ${turn ? 'X' : 'O'}`
-  }
+  const { squares, handleClick, turn, handleRestart } = Logic()
+  const winner = ResultLogic(squares)
 
   return (
-    <div className="game">
-      <div className="status">
-        <h1>{status}</h1>
-      </div>
+    <VStack {...gameContainerStyle}>
+      <Text fontSize="2xl" color="white">
+        {winner ? `Winner: ${winner}` : `Next Player: ${turn ? 'X' : 'O'}`}
+      </Text>
 
-      <div className="board">
-        {currentSquares.map((value, index) => (
-          <Square
-            key={index}
-            value={value}
-            onSquareClick={() => handleClick(index)}
-          />
+      <Box {...boardStyle}>
+        {squares.map((value, i) => (
+          <Square key={i} value={value} onClick={() => handleClick(i)} />
         ))}
-      </div>
+      </Box>
 
-      <button className="restart" onClick={handleRestart}>
+      <Button {...restartButtonStyle} onClick={handleRestart}>
         Restart
-      </button>
-    </div>
+      </Button>
+    </VStack>
   )
 }
 

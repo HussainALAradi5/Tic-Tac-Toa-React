@@ -1,10 +1,13 @@
+import { Box } from '@chakra-ui/react'
 import Game from './Game'
+import { mainContainerStyle } from './styles'
 
 const MainContainer = () => {
   return (
-    <div className="mainContainer">
+    <Box {...mainContainerStyle}>
       <Game />
-    </div>
+    </Box>
   )
 }
+
 export default MainContainer
