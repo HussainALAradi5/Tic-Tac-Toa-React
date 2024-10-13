@@ -1,120 +1,114 @@
 * {
-  font-family: cursive;
+  font-family: 'Cursive', sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: rgb(36, 35, 35);
-  margin: 0;
-  padding: 0;
+  background-color: #1e1e1e;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-.squareContainer {
+.game {
   display: flex;
-  flex-wrap: wrap;
-  width: 300px;
-  justify-content: center;
-  text-align: center;
-}
-
-.square {
-  width: calc(30% - 10px);
-  padding-top: calc(30% - 10px);
-  margin: 5px;
-  position: relative;
-}
-
-.square button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  font-size: 3rem;
-  background-color: royalblue;
-  color: whitesmoke;
-  border: none;
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-button:hover {
-  background-color: darkblue;
-  transition: 1.5s;
-  box-shadow: 1rem 1rem 1rem black;
-  cursor: pointer;
-}
-
-.restrt {
-  display: flex;
-  width: 8rem;
-  font-size: 2rem;
-  justify-self: center;
-  margin-top: 2rem;
-  background-color: royalblue;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .status {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 300px;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.square {
+  aspect-ratio: 1;
+  background-color: royalblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
   color: whitesmoke;
-  margin-bottom: 1rem;
-  text-align: center;
-  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.square:hover {
+  background-color: #1f4788;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Restart button */
+.restart {
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  background-color: royalblue;
+  color: whitesmoke;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restart:hover {
+  background-color: darkblue;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
-  .squareContainer {
+  .board {
     width: 80%;
   }
 
   .square {
-    width: calc(30% - 6px);
-    padding-top: calc(30% - 6px);
-  }
-
-  button {
     font-size: 2rem;
   }
 
-  .restrt {
-    width: 21%;
-    font-size: 1.5rem;
-    margin-top: 1rem;
+  .restart {
+    font-size: 1.2rem;
   }
 
   .status {
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .squareContainer {
+  .board {
     width: 90%;
   }
 
   .square {
-    width: calc(30% - 4px);
-    padding-top: calc(30% - 4px);
-  }
-
-  button {
     font-size: 1.5rem;
   }
 
-  .restrt {
-    width: 20%;
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+  .restart {
+    font-size: 1rem;
   }
 
   .status {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
   }
 }
